@@ -303,19 +303,20 @@ nav p {
     width: 100%;
 }
 .thesis-header {
-    padding: 32px auto;
+    padding: 32px;
     text-align: center;
 }
 .thesis-content {
     display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
+    margin: 0;
 }
 .thesis-content-video {
     flex-basis: 60%;
     justify-content: center;
     align-items: center;
-    margin: 24px;
+    margin: 0 24px;
 }
 .thesis-content-video video {
     width: 100%;
@@ -328,13 +329,11 @@ nav p {
     justify-content: flex-start;
     align-items: left;
     text-align: left;
-    margin-top: 16px;
 }
 .thesis-content-right-card {
     display: flex;
     flex-basis: 40%;
     flex-flow: row;
-    margin-top: 16px;
 }
 .thesis-content-right-card-image {
     width: 100%;
