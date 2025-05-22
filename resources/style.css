@@ -1,91 +1,73 @@
+/* --- GLOBAL STYLES --- */
 html {
     font-family: sans-serif;
     background-color: rgba(208, 221, 208, 0.61);
 }
-p {
-    font-size: 24px;
+body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-h1 {
-    font-size: 50px;
-    font-weight: bold;
+p {
+    font-size: 24px;
+    margin: 0;
     padding: 0;
 }
-h2 {
-    font-size: 40px;
-    padding: 0;
+h1 { font-size: 50px; font-weight: bold; margin: 0; padding: 0; }
+h2 { font-size: 40px; margin: 0; padding: 0; }
+h3 { font-size: 32px; margin: 0; padding: 0; }
+header, .mobile-header, nav, .logo-head, .banner-container, .practice-container, .courses-container, .courses-content, .thesis-container, .thesis-content, .thesis-content-video, .thesis-content-right, .thesis-content-right-card, .thesis-content-right-card-image, .thesis-content-right-card-text, .terms, footer {
+    box-sizing: border-box;
 }
-h3 {
-    font-size: 32px;
-    padding: 0;
+.mobile-header {
+    height: 64px;
+    display: flex;
+    width: 100vw;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (min-width: 381px) {
+    .mobile-header { display: none !important; }
 }
 header {
     display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
     height: 64px;
-    width: 100%;
+    min-width: 100%;
     align-items: center;
     background-color: rgb(240, 240, 215);
 }
-.logo-head {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    margin-left: 24px;
-}
-.logo-head h1 {
-    font-size: 32px;
-  
-}
-.dark-gray-text {
-    color: rgb(114, 125, 115);
-}
-light-gray-text {
-    color:  rgb(208, 221, 208);
-}
+.logo-head { display: flex; margin-left: 24px; }
+.logo-head h1 { font-size: 32px; }
+.dark-gray-text { color: rgb(114, 125, 115); }
+light-gray-text { color: rgb(208, 221, 208); }
 nav {
     display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
     height: 64px;
     align-items: center;
     margin-right: 24px;
 }
-nav p {
-    margin-left: 16px;
-}
+nav p { margin-left: 16px; }
 .banner-container {
     display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 100%;
     background-color: rgb(208, 221, 208);
 }
-.banner-image {
-    flex-basis: 60%;
-    margin: 32px 24px;
-}
-.banner-image img {
-    max-width: 100%;
-    height: auto;
-}
+.banner-image { flex-basis: 60%; margin: 32px 24px; }
+.banner-image img { max-width: 100%; height: auto; }
 .banner-text {
     flex-basis: 40%;
     margin: 32px 24px;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: left;
     text-align: left;
     color: rgb(114, 125, 115);
-    margin: 32px 24px;
-
 }
 .start-here-button {
     display: flex;
@@ -94,25 +76,17 @@ nav p {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 400;
-    width: 90% !important;
-    justify-content: center !important;
-    padding: 8px !important;
-    margin: 16px 0px;
-}
-.start-here-button span {
+    width: 90%;
+    justify-content: center;
     padding: 8px;
-    margin: 0;
-    font-size: large;
+    margin: 16px 0;
 }
 .practice-container {
     display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 32px;
+    margin: 32px 0;
 }
 .practice-left-side {
     flex-basis: 60%;
@@ -120,248 +94,91 @@ nav p {
     flex-flow: column;
     padding-right: 24px;
 }
-.practice-left-side img {
-    max-width: 100%;
-    height: auto;
-    padding: 0 24px;
-}
-.practice-left-side h1, p {
-    color: rgb(114, 125, 115);
-    margin-left: 24px;
-}
-.practice-left-side p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    /* or set to 0 for no space */
-}
-
-.practice-right-side {
-    flex-basis: 40%;
-    display: flex;
-    flex-flow: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin: 32px 0px;;
-} 
-.orientation-date {
+.practice-left-side img { max-width: 100%; height: auto; padding: 0 24px; }
+.practice-left-side h1, .practice-left-side p { color: rgb(114, 125, 115); margin-left: 24px; }
+.practice-right-side { flex-basis: 40%; display: flex; flex-flow: column; margin: 32px 0; }
+.orientation-date, .our-campus, .our-guest-lecture {
     min-width: 100%;
     display: flex;
     flex-flow: row;
-    flex-wrap: nowrap;
     padding: 16px;
     align-items: center;
-}
-.orientation-date-image {
-    flex-basis: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.orientation-date-image img {
-    width: 100%;
-    height: auto;
-}   
-.orientation-date-text {
-    text-align: left;
-    flex-basis: 65%;
-    justify-content: flex-start;
-}
-.our-campus {
-    min-width: 100%;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    padding: 16px;
-    align-items: center;
-}
-.our-campus-image {
-    flex-basis: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.our-campus-image img {
-    width: 100%;
-    height: auto;
-}   
-.our-campus-text {
-    text-align: left;
-    flex-basis: 65%;
-    justify-content: flex-start;
-    margin: 0 8px;
-    align-items: space-around;
-}
-.our-guest-lecture {
-    min-width: 100%;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    padding: 16px;
-    align-items: center;
-}
-.our-guest-lecture-image {
-    flex-basis: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.our-guest-lecture-image img {
-    width: 100%;
-    height: auto;
-}   
-.our-guest-lecture-text {
-    text-align: left;
-    flex-basis: 65%;
 }
 .practice-right-side h4 {
-    margin-left: 24px;
     font-size: 24px;
+    margin: 0;
+    padding-bottom: 16px;
 }
-
-.orientation-date-text h4,
-.orientation-date-text p,
-.our-campus-text h4,
-.our-campus-text p,
-.our-guest-lecture-text h4,
-.our-guest-lecture-text p {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    line-height: 1.3;
-    font-size: 20px;
+.orientation-date-image, .our-campus-image, .our-guest-lecture-image {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
 }
-
-.orientation-date:hover,
-.our-campus:hover,
-.our-guest-lecture:hover {
-    background-color: rgb(208, 221, 208);
+.orientation-date-image img, .our-campus-image img, .our-guest-lecture-image img { width: 100%; height: auto; }
+.orientation-date-text, .our-campus-text, .our-guest-lecture-text {
+    text-align: left;
+    flex-basis: 65%;
+    justify-content: flex-start;
 }
-.read-more {
-    color: rgb(51, 181, 221);
-}
+.read-more { color: rgb(51, 181, 221); }
 .courses-container {
-    padding: 0 72px;
+    padding: 0 72px 32px 72px;
     background-color: rgb(208, 221, 208);
     width: 100%;
-    padding-bottom: 32px;
 }
-.courses-header {
-    text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+.courses-header { text-align: center; padding: 32px 0; }
 .courses-content {
     display: flex;
-    flex-flow: row;
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
     align-items: stretch;
 }
-.software-course-card, 
-.computer-course-card, 
-.design-course-card, 
-.data-course-card,
-.business-course-card,
-.marketing-course-card {
+.software-course-card, .computer-course-card, .design-course-card, .data-course-card, .business-course-card, .marketing-course-card {
     display: flex;
     flex-flow: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    text-align: left;
     align-items: flex-start;
     max-width: 30%;
-    height: auto;
     background-color: white;
 }
-.software-course-card img, 
-.computer-course-card img, 
-.design-course-card img, 
-.data-course-card img,
-.business-course-card img,
-.marketing-course-card img {
+.software-course-card img, .computer-course-card img, .design-course-card img, .data-course-card img, .business-course-card img, .marketing-course-card img {
     width: 100%;
     height: auto;
 }
-.software-course-card h2, 
-.computer-course-card h2, 
-.design-course-card h2, 
-.data-course-card h2,
-.business-course-card h2,
-.marketing-course-card h2 {
+.software-course-card h2, .computer-course-card h2, .design-course-card h2, .data-course-card h2, .business-course-card h2, .marketing-course-card h2 {
     margin: 16px;
 }
-.software-course-card p, 
-.computer-course-card p, 
-.design-course-card p, 
-.data-course-card p,
-.business-course-card p,
-.marketing-course-card p {
+.software-course-card p, .computer-course-card p, .design-course-card p, .data-course-card p, .business-course-card p, .marketing-course-card p {
     margin: 8px 16px;
 }
-.thesis-container {
-    width: 100%;
-}
-.thesis-header {
-    padding: 32px;
-    text-align: center;
-}
+.thesis-container { width: 100%; }
+.thesis-header { padding: 32px; text-align: center; }
 .thesis-content {
     display: flex;
     flex-flow: row;
-    flex-wrap: nowrap;
-    margin: 0;
-    margin-bottom: 32px
+    margin: 0 0 32px 0;
 }
 .thesis-content-video {
     flex-basis: 60%;
     justify-content: center;
     align-items: center;
     margin: 0 24px;
+    border-bottom: 2px solid rgb(114, 125, 115); /* full-width border for desktop */
 }
-.thesis-content-video video {
-    width: 100%;
-    height: auto;
-}
-.thesis-content-right {
-    flex-basis: 40%;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: left;
-    text-align: left;
-}
-.thesis-content-right-card {
-    display: flex;
-    flex-basis: 40%;
-    flex-flow: row;
-}
-.thesis-content-right-card-image {
-    width: 100%;
-    flex-basis: 35%;
-    object-fit: cover;
-    align-items: stretch;
-    padding: 16px;
-}
-.thesis-content-right-card-image img {
-    margin: 16pxpx;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.thesis-content-right-card-text h4,
-.thesis-content-right-card-text p {
+.thesis-content-video video { width: 100%; height: auto; }
+.thesis-content-right { flex-basis: 40%; display: flex; flex-flow: column; text-align: left; }
+.thesis-content-right-card { display: flex; flex-basis: 40%; flex-flow: row; }
+.thesis-content-right-card-image { width: 100%; flex-basis: 35%; object-fit: cover; align-items: stretch; padding: 16px; }
+.thesis-content-right-card-image img { max-width: 100%; height: auto; object-fit: cover; }
+.thesis-content-right-card-text h4, .thesis-content-right-card-text p {
     text-align: left;
     margin: 16px;
     padding: 0;
-    align-items: center;
     max-width: 100%;
 }
-.thesis-content-right-card-text h4 {
-    font-size: 24px;
-}
-
+.thesis-content-right-card-text h4 { font-size: 24px; }
 .thesis-content-right-card-text {
     margin: 16px;
     flex-basis: 65%;
@@ -369,50 +186,103 @@ nav p {
     display: flex;
     flex-flow: column;
 }
-.thesis-content-right-card:hover {
-    background-color:rgb(208, 221, 208);
-}
+.thesis-content-right-card:hover { background-color: rgb(208, 221, 208); }
 footer {
     border-top: solid 1px rgb(114, 125, 115);
-    padding-top: 16px; 
+    padding-top: 16px;
     width: 100%;
     display: flex;
-    flex-flow: row;
     justify-content: space-between;
     height: 64px;
 }
-.terms {
-    display: flex;
-    flex-direction: row;;
+.terms { display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    color:rgb(114, 125, 115);
+    margin-bottom: 32px;
 }
+.terms p {
+    padding: 16px;
+}
+.copyright { color: rgb(114, 125, 115)!important; }
+.copyright p { font-size: 16px; margin: 0; }
 
-@media (max-width: 320px) {
-    /* Turn main containers into column flow */
-    .banner-container,
-    .practice-container,
-    .courses-content,
-    .thesis-content {
+/* --- MOBILE STYLES --- */
+@media only screen and (max-width: 380px) {
+    html, body { width: 100vw !important; padding: 0 !important; }
+    .courses-container, .courses-content, .thesis-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+    }
+    .banner-container, .practice-container, .courses-content, .thesis-content {
         flex-direction: column !important;
-        flex-wrap: nowrap !important;
         align-items: stretch !important;
+        width: 100vw !important;
     }
-
-    /* Hide images in information-main and banner */
-    .information-main img,
+    .practice-left-side { display: none !important; }
+    .banner-container, .banner-image { margin: 0 !important; }
+    .courses-container { padding: 8px 16px !important; }
+    .courses-content img, .courses-content p { display: none !important; }
+    .thesis-content-right-card { display: none !important; }
+    .orientation-date, .our-campus, .our-guest-lecture {
+        flex-direction: column !important;
+        padding: 8px !important;
+    }
+    .software-course-card, .computer-course-card, .design-course-card, .data-course-card, .business-course-card, .marketing-course-card {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-1 * 16px) !important;
+        margin-right: calc(-1 * 16px) !important;
+        background-color: rgb(114, 125, 115) !important;
+        box-sizing: border-box;
+        padding: 0 !important;
+    }
+    .software-course-card h2, .computer-course-card h2, .design-course-card h2, .data-course-card h2, .business-course-card h2, .marketing-course-card h2 {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 16px 16px;
+        background: transparent;
+        color: #fff;
+        text-align: left;
+    }
+    img, video {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        height: auto !important;
+    }
     .banner-image,
-    .banner-image img {
+    .orientation-date-image,
+    .our-campus-image,
+    .our-guest-lecture-image,
+    .thesis-content-video,
+    .thesis-content-right-card-image {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .logo-head, nav {
         display: none !important;
     }
-
-    /* Hide images and p's in courses container */
-    .courses-content img,
-    .courses-content p {
-        display: none !important;
+    .orientation-date-image,
+    .our-campus-image,
+    .our-guest-lecture-image {
+        margin-right: 0 !important;
+        margin-bottom: 16px !important;
     }
-
-    /* Hide images and p's in thesis-content-right */
-    .thesis-content-right-card-image,
-    .thesis-content-right-card-text p {
-        display: none !important;
+    .thesis-content-video {
+        border-bottom: 2px solid rgb(114, 125, 115);
+        width: 100vw !important;
+        margin-left: calc(-1 * 16px) !important;
+        margin-right: calc(-1 * 16px) !important;
+        padding-bottom: 16px;
+        box-sizing: border-box;
     }
+    .terms { display: none !important; }
+    .copyright p { font-size: 8px !important; text-align: center;}
+    footer {justify-content: center;}
 }
+
