@@ -1,5 +1,6 @@
 html {
     font-family: sans-serif;
+    background-color: rgba(208, 221, 208, 0.61);
 }
 p {
     font-size: 24px;
@@ -241,7 +242,7 @@ nav p {
 }
 .courses-container {
     padding: 0 72px;
-    background-color: rgba(208, 221, 208, 0.61);
+    background-color: rgb(208, 221, 208);
     width: 100%;
     padding-bottom: 32px;
 }
@@ -311,6 +312,7 @@ nav p {
     flex-flow: row;
     flex-wrap: nowrap;
     margin: 0;
+    margin-bottom: 32px
 }
 .thesis-content-video {
     flex-basis: 60%;
@@ -363,7 +365,7 @@ nav p {
 .thesis-content-right-card-text {
     margin: 16px;
     flex-basis: 65%;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     flex-flow: column;
 }
