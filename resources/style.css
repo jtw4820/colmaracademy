@@ -4,10 +4,15 @@ html {
 p {
     font-size: 24px;
     padding: 0;
+    margin: 0;
 }
 h1 {
     font-size: 50px;
     font-weight: bold;
+    padding: 0;
+}
+h2 {
+    font-size: 40px;
     padding: 0;
 }
 h3 {
@@ -238,7 +243,7 @@ nav p {
     padding: 0 72px;
     background-color: rgba(208, 221, 208, 0.61);
     width: 100%;
-
+    padding-bottom: 32px;
 }
 .courses-header {
     text-align: center;
@@ -275,7 +280,7 @@ nav p {
 .data-course-card img,
 .business-course-card img,
 .marketing-course-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .software-course-card h2, 
@@ -293,4 +298,89 @@ nav p {
 .business-course-card p,
 .marketing-course-card p {
     margin: 8px 16px;
+}
+.thesis-container {
+    width: 100%;
+}
+.thesis-header {
+    padding: 32px auto;
+    text-align: center;
+}
+.thesis-content {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+.thesis-content-video {
+    flex-basis: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+}
+.thesis-content-video video {
+    width: 100%;
+    height: auto;
+}
+.thesis-content-right {
+    flex-basis: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: left;
+    text-align: left;
+    margin-top: 16px;
+}
+.thesis-content-right-card {
+    display: flex;
+    flex-basis: 40%;
+    flex-flow: row;
+    margin-top: 16px;
+}
+.thesis-content-right-card-image {
+    width: 100%;
+    flex-basis: 35%;
+    object-fit: cover;
+    align-items: stretch;
+    padding: 16px;
+}
+.thesis-content-right-card-image img {
+    margin: 16pxpx;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.thesis-content-right-card-text h4,
+.thesis-content-right-card-text p {
+    text-align: left;
+    margin: 16px;
+    padding: 0;
+    align-items: center;
+    max-width: 100%;
+}
+.thesis-content-right-card-text h4 {
+    font-size: 24px;
+}
+
+.thesis-content-right-card-text {
+    margin: 16px;
+    flex-basis: 65%;
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+}
+.thesis-content-right-card:hover {
+    background-color:rgb(208, 221, 208);
+}
+footer {
+    border-top: solid 1px rgb(114, 125, 115);
+    padding-top: 16px; 
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 64px;
+}
+.terms {
+    display: flex;
+    flex-direction: row;;
 }
