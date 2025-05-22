@@ -385,3 +385,34 @@ footer {
     display: flex;
     flex-direction: row;;
 }
+
+@media (max-width: 320px) {
+    /* Turn main containers into column flow */
+    .banner-container,
+    .practice-container,
+    .courses-content,
+    .thesis-content {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+    }
+
+    /* Hide images in information-main and banner */
+    .information-main img,
+    .banner-image,
+    .banner-image img {
+        display: none !important;
+    }
+
+    /* Hide images and p's in courses container */
+    .courses-content img,
+    .courses-content p {
+        display: none !important;
+    }
+
+    /* Hide images and p's in thesis-content-right */
+    .thesis-content-right-card-image,
+    .thesis-content-right-card-text p {
+        display: none !important;
+    }
+}
