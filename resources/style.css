@@ -20,10 +20,10 @@ header {
   
 }
 .dark-gray-text {
-    color: darkgray;
+    color: rgb(114, 125, 115);
 }
 light-gray-text {
-    color: lightgray;
+    color:  rgb(208, 221, 208);
 }
 nav {
     display: flex;
@@ -34,4 +34,47 @@ nav {
 }
 nav p {
     margin-left: 16px;
+}
+.banner-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 24px;
+    width: 100%;
+    background-color: rgb(208, 221, 208);
+}
+.banner-image {
+    max-width: 60%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    margin: 32px 24px;
+}
+.banner-image img {
+    width: 100%;
+    height: auto;
+}
+.banner-text {
+    flex-basis: 40%;
+    margin: 32px 24px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: left;
+    color: rgb(114, 125, 115)
+}
+.start-here-button {
+    background-color: rgb(114, 125, 115);
+    color: rgb(208, 221, 208);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+.start-here-button p {
+    padding: 8px;
+    margin: 0;
 }
