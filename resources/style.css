@@ -6,14 +6,16 @@ header {
     flex-flow: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 0 24px;
     height: 64px;
+    width: 100%;
     align-items: center;
+    background-color: rgb(240, 240, 215);
 }
 .logo-head {
     display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
+    margin-left: 24px;
 }
 .logo-head h1 {
     font-size: 32px;
@@ -29,8 +31,10 @@ nav {
     display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
-    justify-content: space-between;;
+    justify-content: space-between;
     height: 64px;
+    align-items: center;
+    margin-right: 24px;
 }
 nav p {
     margin-left: 16px;
@@ -41,31 +45,31 @@ nav p {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin: 0 24px;
     width: 100%;
     background-color: rgb(208, 221, 208);
 }
 .banner-image {
-    max-width: 60%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
+    flex-basis: 60%;
     margin: 32px 24px;
 }
 .banner-image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 .banner-text {
     flex-basis: 40%;
-    margin: 32px 24px;
+    margin: 32px;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
     text-align: left;
-    color: rgb(114, 125, 115)
+    color: rgb(114, 125, 115);
+    margin: 32px 24px;
+
 }
 .start-here-button {
+    display: flex;
     background-color: rgb(114, 125, 115);
     color: rgb(208, 221, 208);
     border: none;
@@ -73,8 +77,58 @@ nav p {
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
+    width: 40% !important;
+    justify-content: center !important;
+    margin: 24px auto !important;
+    align-items: center !important;
+    padding: 8px !important;
 }
 .start-here-button p {
     padding: 8px;
     margin: 0;
+    font-size: large;
+}
+.practice-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.practice-left-side {
+    flex-basis: 60%;
+    margin: 32px 24px;
+}
+.practice-left-side img {
+    max-width: 100%;
+    margin-right: 24px;
+    height: auto;
+}
+.practice-right-side {
+    flex-basis: 40%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+} 
+.orientation-date {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    padding: 16px;
+}
+.orientation-date-image {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orientation-date-image img {
+    width: 100%;
+    height: auto;
+}   
+.orientation-date-text {
+    text-align: left;
+    margin-left: 16px;
 }
